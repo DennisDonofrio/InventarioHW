@@ -1,0 +1,16 @@
+Analisi
+	Domande QdC
+	Requisiti
+	Pianificazione Gantt
+	Use Case
+	Design del database
+	Design delle interfacce
+Preparazione
+	Richiedere inventario HW
+Implementazione
+	Struttura database
+Applicativo web
+	Pagina di login
+	Sicurezza del login (sicurezza password)
+	Pagine home
+	
