@@ -1,0 +1,1 @@
+Documentazione creata ed aggiornata + commit.txt + diario + Design interfaccie creato ed aggiornato + Gantt finito + UseCaseCompleto.png + GanttProgetto.png
