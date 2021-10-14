@@ -1,2 +1,3 @@
 Documentazione creata ed aggiornata + commit.txt + diario + Design interfaccie creato ed aggiornato + Gantt finito + UseCaseCompleto.png + GanttProgetto.png
 Documentazione aggiornata + diario + designDatabase completo + design interfacce aggiornato + gantt aggiornato + requisiti migliorati + test case migliorati ma non finiti
+Documentazione aggiornata + diario + files php creati ed aggiornati + login finito senza css
