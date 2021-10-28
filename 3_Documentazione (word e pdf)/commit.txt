@@ -2,3 +2,4 @@ Documentazione creata ed aggiornata + commit.txt + diario + Design interfaccie c
 Documentazione aggiornata + diario + designDatabase completo + design interfacce aggiornato + gantt aggiornato + requisiti migliorati + test case migliorati ma non finiti
 Documentazione aggiornata + diario + files php creati ed aggiornati + login finito senza css
 Documentazione aggiornata + diario + files php creati ed aggiornati + login rifatto + register finito
+Diario + files php creati ed aggiornati + login rifatto + register rifatto + modifyUser quasi finito
