@@ -9,6 +9,7 @@
 	require 'models/login_model.php';
 	require 'models/register_model.php';
 	require 'models/modifyuser_model.php';
+	require 'models/user_model.php';
 
 	require 'config/paths.php';
 	require 'config/database.php';

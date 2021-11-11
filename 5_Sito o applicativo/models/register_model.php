@@ -11,12 +11,16 @@
 		private $hash_password = "";
 
 		function __construct(){
+			var_dump($_POST);
 			if(!empty($_POST['name']) && !empty($_POST['surname']) && !empty($_POST['email']) && !empty($_POST['pass1']) && !empty($_POST['pass2'])){
                 $this->name = $_POST['name'];
                 $this->surname = $_POST['surname'];
                 $this->email = $_POST['email'];
                 $this->pass1 = $_POST['pass1'];
                 $this->pass2 = $_POST['pass2'];
+				if($_POST['is_admin'] == "on"){
+					$this->isAdmin = 1;
+				}
             }else{
                 throw new Exception("Compilare tutti i campi");
             }

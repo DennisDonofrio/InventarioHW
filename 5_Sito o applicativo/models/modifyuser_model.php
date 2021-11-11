@@ -2,6 +2,7 @@
     class ModifyUser_Model{
 
         private $name;
+        private $surname;
         private $username;
         private $email;
         private $pass1;
@@ -48,20 +49,22 @@
 			require 'libs/Connection.php';
 			require 'libs/Hash.php';
             $this->getVariables();
-            echo $this->pass1;
+            //echo $this->pass1;
 			if($this->isPasswordEquals() == 0){
 				$strongRegex = "/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/";
 				if(preg_match($strongRegex, $this->pass1)){
-                    $sql = "SELECT name FROM user WHERE username='".$this->username."'";
+                    $sql = "SELECT name, surname FROM user WHERE username='".$this->username."'";
                     $result = $conn->query($sql);
                     while($row = $result->fetch_assoc()) {
+                        //var_dump($row);
                         $this->name = $row['name'];
+                        $this->surname = $row['surname'];
                     }
 
 					$hp = new Hash($this->pass1);
 					$hp->cipherPassword("sha256", strtolower($this->name));
 					$this->hash_password = $hp->getCipherPass();
-					$this->username = strtolower("$this->name.$this->surname");
+					$this->username = strtolower($this->name.".".$this->surname);
 
                     $sql = "UPDATE user set email='".$this->email."', hash_password='".$this->hash_password."' WHERE username='".$this->username."';";
                     $result = $conn->query($sql);

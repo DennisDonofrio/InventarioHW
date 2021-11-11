@@ -8,12 +8,18 @@
 		}
 		
 		function index(){
-            $this->view->render('header', 1);
-			$this->view->render('modifyuser/first', 1);
-            $this->modifyuser = new ModifyUser_Model();
-            echo $this->modifyuser->getUsers();
-            $this->view->render('modifyuser/last', 1);
-            $this->view->render('footer', 1);
+			if(!empty($_SESSION['id'])){
+				$this->view->render('headerAdmin', 1);
+				$this->view->render('modifyuser/first', 1);
+				$this->modifyuser = new ModifyUser_Model();
+				echo $this->modifyuser->getUsers();
+				$this->view->render('modifyuser/last', 1);
+				$this->view->render('footer', 1);
+			}else{
+				$this->view->render('login/index');
+				echo "session not started";
+			}
+            
 		}
 
 		function modifyuser(){

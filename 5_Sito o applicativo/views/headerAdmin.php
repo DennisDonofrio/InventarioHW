@@ -10,11 +10,15 @@
 </head>
 <body>
 	<div id="header">
-		Header
+		HeaderAdmin
 		<br />
 		<a href="<?php echo URL; ?>index">Index</a>
 		<a href="<?php echo URL; ?>help">Help</a>
 		<a href="<?php echo URL; ?>login">Login</a>
+		<a href="<?php echo URL; ?>register">Register</a>
+		<a href="<?php echo URL; ?>modifyuser">ModifyUser</a>
+		<a href="<?php echo URL; ?>deleteuser">DeleteUser</a>
+		<a href="<?php echo URL; ?>logout">Logout</a>
 	</div>
 
 	<div id="content">

@@ -5,7 +5,12 @@
 		}
 		
 		function index(){
-			$this->view->render('register/index');
+			if(!empty($_SESSION['id'])){
+				$this->view->render('register/index');
+			}else{
+				$this->view->render('login/index');
+			}
+			
 		}
 
 		function register(){

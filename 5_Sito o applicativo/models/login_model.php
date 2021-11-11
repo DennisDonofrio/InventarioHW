@@ -1,4 +1,5 @@
 <?php
+    session_start();
     class Login_Model{
         private $username = "";
         private $name = "";
@@ -46,7 +47,11 @@
             $this->cipherPass = $hash->getCipherPass();
             $sql = "SELECT * FROM user WHERE username='$this->username' AND hash_password='$this->cipherPass'";
             $result = $conn->query($sql);
-            if($result->num_rows > 0){
+            $row = $result->fetch_assoc();
+            if($result->num_rows == 1){
+                $_SESSION['id'] = $row['id'];
+                $_SESSION['isAdmin'] = $row['is_admin'];
+                ///////////var_dump($_SESSION);
                 return true;
             }else{
                 return false;

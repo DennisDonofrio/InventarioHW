@@ -26,7 +26,7 @@
     </tr>
     <tr>
         <td>
-            <input type="submit" value="Register" name="register">
+            <input type="submit" value="Modify" name="modify">
         </td>
     </tr>
 </table>

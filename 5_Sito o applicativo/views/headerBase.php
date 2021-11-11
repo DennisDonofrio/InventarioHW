@@ -10,11 +10,12 @@
 </head>
 <body>
 	<div id="header">
-		Header
+		HeaderBase
 		<br />
 		<a href="<?php echo URL; ?>index">Index</a>
 		<a href="<?php echo URL; ?>help">Help</a>
 		<a href="<?php echo URL; ?>login">Login</a>
+		<a href="<?php echo URL; ?>logout">Logout</a>
 	</div>
 
 	<div id="content">
