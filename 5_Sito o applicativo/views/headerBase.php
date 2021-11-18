@@ -14,8 +14,8 @@
 		<br />
 		<a href="<?php echo URL; ?>index">Index</a>
 		<a href="<?php echo URL; ?>help">Help</a>
-		<a href="<?php echo URL; ?>login">Login</a>
-		<a href="<?php echo URL; ?>logout">Logout</a>
+		<a href="<?php echo URL; ?>home">Home</a>
+		<a style="float:right;" href="<?php echo URL; ?>logout">Logout</a>
 	</div>
 
 	<div id="content">

@@ -7,6 +7,9 @@
 			parent::__construct();
 		}
 		
+		/**
+		 * Questa funzione è la funzione di default che viene chiamata.
+		 */
 		function index(){
 			if(!empty($_SESSION['id'])){
 				$this->view->render('headerAdmin', 1);
@@ -22,9 +25,13 @@
             
 		}
 
+		/**
+		 * Questa funzione permette di modificare un utente.
+		 */
 		function modifyuser(){
 			try{
 				$this->modifyuser = new ModifyUser_Model();
+				// call modifyuser method in modifyuser class
                 $this->modifyuser->modifyuser();
 				$this->view->render('modifyuser/success');
 			}catch(Exception $e){

@@ -4,6 +4,15 @@
 			//echo "This is the view<br />";
 		}
 
+		/**
+		 * Questa funzione permette di fare il require di un file php contenente codice html
+		 * potendo importare anche l'header in base all'utente e il footer.
+		 * Come secondo parametro posso inserire un valore bool per scegliere se ritornare solo
+		 * la pagina php contenente l'html o tutto il pacchetto con i 3 file.
+		 * 
+		 * @param String $name -> path of file to open
+		 * @param Boolean $noInclude -> include the right header with footer
+		 */
 		public function render($name, $noInclude = false){
 
 			/**

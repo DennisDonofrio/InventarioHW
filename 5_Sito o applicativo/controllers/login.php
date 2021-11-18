@@ -4,6 +4,9 @@
 			parent::__construct();
 		}
 		
+		/**
+		 * Questa funzione è la funzione di default che viene chiamata.
+		 */
 		function index(){
 			$this->view->render('login/index');
 		}
@@ -24,7 +27,6 @@
 				$this->view->render('login/index', 1);
 				echo $e->getMessage();
 				$this->view->render('footer', 1);
-				
 			}
 		}
 	}
