@@ -7,8 +7,8 @@
 
 		function getUsers(){
 			require 'libs/Connection.php';
-            $sql = "SELECT username FROM user;";
-            $result = $conn->query($sql);
+			$sql = "SELECT username FROM user;";
+			$result = $conn->query($sql);
 			$out = array();
 			while($out[] = $result->fetch_assoc()){}
 			return $out;

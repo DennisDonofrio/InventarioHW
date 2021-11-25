@@ -11,6 +11,9 @@
 			$this->view->render('login/index');
 		}
 
+		/**
+		 * Questa funzione permette di effettuare il login.
+		 */
 		function login(){
 			try{
 				$login = new Login_Model();

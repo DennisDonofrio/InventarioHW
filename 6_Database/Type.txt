@@ -1,0 +1,5 @@
+insert into type(name, description) values('Computer', 'Desktop, Laptop e Mac');
+insert into type(name, description) values('Monitor', 'Monitor non apple');
+insert into type(name, description) values('Tastiere', 'Ogni genere di tastiere');
+insert into type(name, description) values('Mouse', 'Ogni genere di mouse');
+insert into type(name, description) values('Proiettori', 'Beamer e retroproiettori');

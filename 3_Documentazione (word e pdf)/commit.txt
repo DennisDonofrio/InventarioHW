@@ -5,3 +5,4 @@ Documentazione aggiornata + diario + files php creati ed aggiornati + login rifa
 Diario + files php creati ed aggiornati + login rifatto + register rifatto + modifyUser quasi finito
 Diario + files php creati ed aggiornati + modifyUser finito + logout finito + deleteuser quasi finito
 Diario + files php aggiornati + documentazione aggiornata + commenti vari nel codice
+Diario + files php aggiornati + documentazione aggiornata + gantt aggiornato + design del database aggiornato + pagina inventario a buon punto

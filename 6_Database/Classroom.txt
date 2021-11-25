@@ -1,0 +1,4 @@
+insert into classroom(number, description) values(420, 'Aula informatica');
+insert into classroom(number, description) values(417, 'Aula informatica');
+insert into classroom(number, description) values(348, 'Aula maturità');
+insert into classroom(number, description) values(1, 'Magazzino');
