@@ -6,3 +6,4 @@ Diario + files php creati ed aggiornati + login rifatto + register rifatto + mod
 Diario + files php creati ed aggiornati + modifyUser finito + logout finito + deleteuser quasi finito
 Diario + files php aggiornati + documentazione aggiornata + commenti vari nel codice
 Diario + files php aggiornati + documentazione aggiornata + gantt aggiornato + design del database aggiornato + pagina inventario a buon punto
+Diario + files php aggiornati + documentazione aggiornata + pagina principale inventario a buon punto + elimina oggetto finito + modifica oggetto a buon punto

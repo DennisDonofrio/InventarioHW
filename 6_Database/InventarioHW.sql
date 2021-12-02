@@ -30,6 +30,7 @@ CREATE TABLE object(
 	user_id INT,
 	classroom_number INT,
 	type_id INT NOT NULL,
+	active BOOL,
 	FOREIGN KEY(user_id) REFERENCES user(id),
 	FOREIGN KEY(classroom_number) REFERENCES classroom(number),
 	FOREIGN KEY(type_id) REFERENCES type(id)

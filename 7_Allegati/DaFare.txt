@@ -1,0 +1,4 @@
+Immagine nella home
+Conferma di cancellazione
+Flag disattivato per cancellazione
+Link per area pezzi archiviati
