@@ -45,5 +45,9 @@
 				require 'views/footer.php';
 			}
 		}
+
+		public function locate($name){
+			header("Location: " . URL . $name);
+		}
 	}
 ?>

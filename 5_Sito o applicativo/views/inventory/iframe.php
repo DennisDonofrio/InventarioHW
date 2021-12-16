@@ -1,5 +1,8 @@
 <link rel="stylesheet" href="<?php echo URL; ?>public/css/default.css"/>
 <div id="content">
+<form method='POST' action='<?php echo URL; ?>inventory/action/0'>
+    <input type="submit" name="button" value="Add">
+</form>
 <?php //var_dump($this->objects); ?>
 <?php if(isset($this->objects) && count($this->objects) > 0 && isset($this->objects[0])) : ?>
 <?php $keys = array('id', 'description', 'serial_number', 'riservation_data', 'classroom_number'); ?>

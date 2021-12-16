@@ -28,10 +28,17 @@
                     $this->view->id = $id;
                     $this->view->render('inventory/confirmDelete', 1);
                 }else if($_POST['button'] == 'Modify'){
-                    $this->view->id = $id;
+                    require 'controllers/iframe.php';
+                    $model = new Inventory_Model();
+                    $this->view->classroom = $model->getClassroom();
+                    $this->view->object = $model->getSingleObject($id);
                     $this->view->render('inventory/modify', 1);
-                }else{
-
+                }else if($_POST['button'] == 'Add'){
+                    require 'controllers/iframe.php';
+                    $model = new Inventory_Model();
+                    $this->view->classroom = $model->getClassroom();
+                    $this->view->types = $model->getTypes();
+                    $this->view->render('inventory/add', 1);
                 }
             }
         }
@@ -53,13 +60,30 @@
         }
 
         function modify($id){
-            $model = new Inventory_Model();
+            if(isset($_POST['Modify'])){
+                $model = new Inventory_Model();
+                try{
+                    if($model->modify($id)){
+                        $this->view->render('inventory/modified', 1);
+                    }
+                }catch(Exception $e){
+                    $this->view->error = $e->getMessage();
+                    $this->view->render('inventory/modify', 1);
+                }
+            }
+        }
+
+        function add(){
             try{
-                if($model->modify($id)){
-                    $this->view->render('inventory/showall', 1);
+                $model = new Inventory_Model();
+                if($model->add()){
+                    $this->view->render('inventory/added', 1);
                 }
             }catch(Exception $e){
-                $this->view->error = $e.getMessage();
+                $this->view->error = $e->getMessage();
+                $this->view->classroom = $model->getClassroom();
+                $this->view->types = $model->getTypes();
+                $this->view->render('inventory/add', 1);
             }
         }
 	}

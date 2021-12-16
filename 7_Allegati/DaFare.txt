@@ -2,3 +2,6 @@ Immagine nella home
 Conferma di cancellazione
 Flag disattivato per cancellazione
 Link per area pezzi archiviati
+
+ricontrollare il gantt
+ricontrollare requisiti
