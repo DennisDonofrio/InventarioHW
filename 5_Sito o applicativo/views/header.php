@@ -17,10 +17,8 @@
 </head>
 <body>
 	<div id="header">
-		Header
+		InventarioHW
 		<br />
-		<a href="<?php echo URL; ?>index">Index</a>
-		<a href="<?php echo URL; ?>help">Help</a>
 		<a href="<?php echo URL; ?>login">Login</a>
 	</div>
 

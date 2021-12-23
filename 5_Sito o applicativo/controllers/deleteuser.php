@@ -4,17 +4,26 @@
 			parent::__construct();
 		}
 
+        /**
+         * Funzione che viene richiamata di default.
+         */
 		function index(){
             $this->getUsers();
             //var_dump($this->view->users);
 			$this->view->render('deleteuser/index');
 		}
 
+        /**
+         * Inserisce nella variabile users gli utenti presenti nel database.
+         */
         function getUsers(){
             $model = new User_Model();
             $this->view->users = $model->getUsers();
         }
 
+        /**
+         * Mostra la pagina per eliminare un utente.
+         */
         function deleteUser(){
             $model = new User_Model();
             try{

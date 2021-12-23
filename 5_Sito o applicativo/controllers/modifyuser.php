@@ -22,7 +22,6 @@
 				$this->view->render('login/index');
 				echo "session not started";
 			}
-            
 		}
 
 		/**
@@ -35,7 +34,7 @@
                 $this->modifyuser->modifyuser();
 				$this->view->render('modifyuser/success');
 			}catch(Exception $e){
-                $this->view->render('header', 1);
+                $this->view->render('headerAdmin', 1);
 				$this->view->render('modifyuser/first', 1);
                 echo $this->modifyuser->getUsers();
                 $this->view->render('modifyuser/last', 1);

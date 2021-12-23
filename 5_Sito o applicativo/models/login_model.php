@@ -51,7 +51,6 @@
             if($result->num_rows == 1){
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['isAdmin'] = $row['is_admin'];
-                ///////////var_dump($_SESSION);
                 return true;
             }else{
                 return false;

@@ -4,6 +4,9 @@
 
 		}
 
+		/**
+		 * Questa funzione ritorna un array contenente i vari tipi.
+		 */
         function getTypes(){
 			require 'libs/Connection.php';
 			$sql = "SELECT id, name FROM type;";
@@ -13,6 +16,9 @@
 			return $out;
 		}
 
+		/**
+		 * Questa funzione ritorna un array contenente gli oggetti con id=$typeid.
+		 */
 		function getObject($typeid){
 			require 'libs/Connection.php';
 			$sql = "SELECT * FROM object WHERE type_id=$typeid AND active=1;";
@@ -22,6 +28,9 @@
 			return $out;
 		}
 
+		/**
+		 * Questa funzione ritorna un array di una posizione contenente l'oggetto alla posizione $id.
+		 */
 		function getSingleObject($id){
 			require 'libs/Connection.php';
 			$sql = "SELECT * FROM object WHERE id='$id';";
@@ -31,6 +40,9 @@
 			return $out;
 		}
 
+		/**
+		 * Questa funzione ritorna un array contenente tutte le aule.
+		 */
 		function getClassroom(){
 			require 'libs/Connection.php';
 			$sql = "SELECT * FROM classroom;";
@@ -39,7 +51,10 @@
 			while($out[] = $result->fetch_assoc()){}
 			return $out;
 		}
-		
+
+		/**
+		 * Questa funzione ritorna un array contenente gli elementi archiviati.
+		 */
 		function getNotActived(){
 			require 'libs/Connection.php';
 			$sql = "SELECT * FROM object WHERE active=0;";
@@ -49,12 +64,18 @@
 			return $out;
 		}
 
+		/**
+		 * Questa funzione permette di archiviare un oggetto.
+		 */
 		function delete($id){
 			require 'libs/Connection.php';
 			$sql = "UPDATE object SET active=0 WHERE id=$id";
 			$result = $conn->query($sql);
 		}
 
+		/**
+		 * Questa funzione permette di modificare un oggetto con dei criteri di sicurezza.
+		 */
 		function modify($id){
 			if(isset($_POST['class'])){
 				if($_POST['class'] > 0){
@@ -65,7 +86,9 @@
 						$null = 'null';
 					}
 					require 'libs/Connection.php';
-					$sql = "UPDATE object SET classroom_number=" . $_POST['class'] . ", riservation_data=" . (isset($date) ? $date : 'null') . ", user_id=" . (isset($user_id) ? $user_id : $null) . " WHERE id=$id";
+					$sql = "UPDATE object SET classroom_number=" . $_POST['class']
+					. ", riservation_data=" . (isset($date) ? $date : 'null') . ", user_id="
+					. (isset($user_id) ? $user_id : $null) . " WHERE id=$id";
 					$result = $conn->query($sql);
 					return true;
 				}else{
@@ -74,6 +97,9 @@
 			}
 		}
 
+		/**
+		 * Questa funzione permette di aggiungere un oggetto all'inventario.
+		 */
 		function add(){
 			if(!empty($_POST['description']) &&
 			!empty($_POST['serial_number']) &&
@@ -81,7 +107,8 @@
 			isset($_POST['type'])){
 				require 'libs/Connection.php';
 				$sql = "INSERT INTO object(description, serial_number, type_id, classroom_number, active)
-				values('" . $_POST['description'] . "', '" . $_POST['serial_number'] . "', " . $_POST['type'] . ", " . $_POST['class'] . ", 1);";
+				values('" . $_POST['description'] . "', '" . $_POST['serial_number']
+				. "', " . $_POST['type'] . ", " . $_POST['class'] . ", 1);";
 				$result = $conn->query($sql);
 				return true;
 			}else{

@@ -4,10 +4,21 @@
 			parent::__construct();
 		}
 
+		/**
+         * Funzione che viene richiamata di default.
+         */
 		function index(){
-			$this->view->render('home/index');
+			if(isset($_SESSION['id'])){
+				$this->view->render('home/index');
+			}else{
+				$this->view->locate('login');
+			}
 		}
 
+		/**
+		 * Questo metodo riceve le richieste e in base al contenuto della
+		 * variabile POST decide cosa fare.
+		 */
 		function action(){
 			if(isset($_POST['inventariohw'])){
 				$this->view->locate('inventory/getPage/0');

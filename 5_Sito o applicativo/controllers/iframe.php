@@ -4,10 +4,17 @@
 			parent::__construct();
 		}
 
+        /**
+         * Funzione che viene richiamata di default.
+         */
 		function index(){
 			$this->view->render('inventory/iframe', 1);
 		}
 
+        /**
+         * Questo metodo stampa il contenuto dell'iframe nella pagina
+         * principale dell'inventario.
+         */
         function getObject($typeid = 0){
             $this->view->archive = false;
             if($typeid > 0){

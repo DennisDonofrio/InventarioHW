@@ -4,6 +4,9 @@
 			parent::__construct();
 		}
 
+        /**
+         * Funzione che viene richiamata di default.
+         */
 		function index(){
             $model = new Inventory_Model();
             $this->view->types = $model->getTypes();
@@ -13,6 +16,9 @@
 			$this->view->render('inventory/showall');
 		}
 
+        /**
+         * Imposta la variabile link a typeid e richiama la funzione index.
+         */
         function getPage($typeid = 0){
             if(!empty($typeid) && ($typeid >= 0 || $typeid == -1)){
                 require 'controllers/iframe.php';
@@ -22,6 +28,10 @@
             $this->index();
         }
 
+        /**
+		 * Questo metodo riceve le richieste e in base al contenuto della
+		 * variabile POST decide cosa fare.
+		 */
         function action($id){
             if(isset($_POST['button'])){
                 if($_POST['button'] == 'Delete'){
@@ -43,6 +53,10 @@
             }
         }
 
+        /**
+         * Questo metodo controlla se l'utente è veramente sicuro
+         * di voler cancellare un elemento dall'inventario.
+         */
         function confirmDelete($id){
             if(isset($_POST['button'])){
                 if($_POST['button'] == 'Confirm'){
@@ -59,6 +73,9 @@
             }
         }
 
+        /**
+         * Questo metodo permette la modifica di un elemento.
+         */
         function modify($id){
             if(isset($_POST['Modify'])){
                 $model = new Inventory_Model();
@@ -73,6 +90,9 @@
             }
         }
 
+        /**
+         * Questa funzione permette di aggiungere un elemento all'inventario.
+         */
         function add(){
             try{
                 $model = new Inventory_Model();

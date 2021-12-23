@@ -12,11 +12,6 @@
                 <a href="<?php echo URL; ?>inventory/getPage/-1">Archvio</a>
             </td>
         </tr>
-        <tr>
-            <td>
-                <a href="<?php echo URL; ?>inventory/action/0">Add</a>
-            </td>
-        </tr>
     </table>
 </div>
 

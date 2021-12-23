@@ -8,8 +8,8 @@
 
 			// if $url is empty, require the default controller
 			if(empty($url[0])){
-				require 'controllers/index.php';
-				$controller = new Index();
+				require 'controllers/home.php';
+				$controller = new Home();
 				$controller->index();
 				return false;
 			}
